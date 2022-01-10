@@ -22,8 +22,4 @@ class Person
       false
     end
   end
-
-  def work
-    true
-  end
 end
