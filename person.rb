@@ -1,22 +1,16 @@
 class Person
-  def initialize(name = "unknown", parent_permission = true, age)
+  def initialize(age, name = 'unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @name = name
     @parent_permission = parent_permission
     @age = age
   end
-  attr_accessor :id
-  attr_accessor :name
-  attr_accessor :age
+  attr_accessor :id, :name, :age
 
   private
 
-  def is_of_age?
-    if @age >= 18
-      true
-    else
-      false
-    end
+  def of_age?
+    @age >= 18
   end
 
   public

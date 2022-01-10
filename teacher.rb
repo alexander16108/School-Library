@@ -1,8 +1,8 @@
-require "./person.rb"
+require './person'
 
 class Teacher < Person
   def initialize(specialization)
-    super(name = "unknown", parent_permission = true, age)
+    super(age, name, parent_permission: true)
     @specialization = specialization
   end
 
