@@ -1,5 +1,5 @@
 class Person
-  def initialize(age, name = 'unknown', parent_permission: true)
+  def initialize(age, name = 'unknown', parent_permission = true)
     @id = Random.rand(1..1000)
     @name = name
     @parent_permission = parent_permission
@@ -16,7 +16,7 @@ class Person
   public
 
   def can_use_services?
-    if is_of_age? == true || @parent_permission
+    if of_age? == true || @parent_permission
       true
     else
       false
