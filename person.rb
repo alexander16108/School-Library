@@ -12,6 +12,7 @@ class Person
   end
   attr_accessor :id, :name, :age
   attr_reader :rental
+
   private
 
   def of_age?
@@ -35,5 +36,5 @@ class Person
   def add_rental(rental)
     @rental.push(rental)
     rental.person = self
-end
+  end
 end

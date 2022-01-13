@@ -2,7 +2,7 @@
 
 # School Library
 
-> In this project, I started building my school library app. In this initial step, I implemented the classes to represent students and teachers. Next, I used the Decorator design pattern to validate and correct the names of people.
+> In this project, I started building my school library app. In this initial step, I implemented the classes to represent students and teachers. Next, I used the Decorator design pattern to validate and correct the names of people. I then finish creating the remaining classes for our school library and created the associations between them.
 
 ## Built With
 
