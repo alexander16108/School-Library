@@ -60,6 +60,33 @@ def create_book
     main()
 end
 
+def display_person
+    if $teacher_arr != [] && $student_arr != []
+        $student_arr.each {|x| puts "[Student] Name: #{x.name}, ID: #{x.id}, Age: #{x.age}"}
+        $teacher_arr.each {|x| puts "[Teacher] Name: #{x.name}, ID: #{x.id}, Age: #{x.age}"}
+    elsif $teacher_arr != [] && $student_arr == []
+        $teacher_arr.each {|x| puts "[Teacher] Name: #{x.name}, ID: #{x.id}, Age: #{x.age}"}
+    elsif $teacher_arr == [] && $student_arr != []
+        $student_arr.each {|x| puts "[Student] Name: #{x.name}, ID: #{x.id}, Age: #{x.age}"}
+    else 
+        puts "There is currently no Teacher nor student"
+    end
+    puts " "
+    main()
+end
+
+def list_books
+    if $book_arr != []
+        $book_arr.each {|x| puts "Title: '#{x.title}', Author: #{x.author}"}
+        puts " "
+        main()
+    else
+        puts "There are currently no registered books"
+        puts " "
+        main()
+    end
+end
+
 
 
 def main
