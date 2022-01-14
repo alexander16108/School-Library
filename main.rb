@@ -13,6 +13,41 @@ $student_arr = []
 $book_arr = []
 $rental_arr = []
 
+def create_student
+    print "Age: "
+    age = gets.chomp
+    print "Classroom: "
+    classroom = gets.chomp
+    print "Name: "
+    name = gets.chomp
+    print "Has parent permission [Y/F]? "
+    permission = gets.chomp
+    if permission == "Y" 
+        permission = true
+    elsif permission == "F"
+        permission = false
+    end
+    student = Student.new(age, classroom, name, permission)
+    $student_arr.push(student)
+    puts "Person created succesfully"
+    puts " "
+    main()
+end
+
+def create_teacher
+    print "Age: "
+    age = gets.chomp
+    print "Name: "
+    name = gets.chomp
+    print "Specialization: "
+    specialty = gets.chomp
+    teacher = Teacher.new(specialty, age, name)
+    $teacher_arr.push(teacher)
+    puts "Person created succesfully"
+    puts " "
+    main()
+end
+
 
 
 def main
