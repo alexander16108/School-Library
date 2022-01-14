@@ -48,6 +48,18 @@ def create_teacher
     main()
 end
 
+def create_book
+    print "Title: "
+    title = gets.chomp
+    print "Author: "
+    author = gets.chomp
+    book = Book.new(title, author)
+    $book_arr.push(book)
+    puts "Book created successfully"
+    puts " "
+    main()
+end
+
 
 
 def main
