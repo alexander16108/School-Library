@@ -87,7 +87,47 @@ def list_books
     end
 end
 
+def create_rental
+    puts "Select a book from the following list by number"
+    $book_arr.each {|x| puts "#{$book_arr.find_index(x)}) Title: #{x.title}, Author: #{x.author}"}
+    number = gets.chomp
+    book = $book_arr[number.to_i]
+    puts " "
+    puts "Select a student (1) or a teacher (2)"
+    number = gets.chomp
+    puts " "
+    if number == "1"
+        puts "Select a person from the following list by number (not id)"
+        $student_arr.each {|x| puts "#{$student_arr.find_index(x)}) [Student] Name: #{x.name} ID: #{x.id} Age: #{x.age}"}
+    elsif number == "2"   
+        puts "Select a person from the following list by number (not id)"
+        $teacher_arr.each {|x| puts "#{$teacher_arr.find_index(x)}) [Teacher] Name: #{x.name} ID: #{x.id} Age: #{x.age}"}
+    end
+    value = gets.chomp
+    person = $teacher_arr[value.to_i]
+    puts " "
+    print "Date: "
+    date = gets.chomp
+    rental = Rental.new(date, book, person)
+    $rental_arr.push(rental)
+    puts "Rental created successfully"
+    puts " "
+    main()
+end
 
+def list_rentals
+    print "ID of person: "
+    number = gets.chomp
+    id_no = number.to_i
+    puts "Rentals:"
+    $rental_arr.each {|x| 
+        if x.person.id == id_no
+            puts "Date: #{x.date}, Book '#{x.book.title}' by #{x.book.author}"
+        end
+    }
+    puts " "
+    main()
+end
 
 def main
     puts "Please choose an option by entering a number:"
