@@ -1,5 +1,5 @@
 require './corrector'
-require './rentals'
+require './rental'
 
 class Person
   def initialize(age, name = 'unknown', parent_permission: true)

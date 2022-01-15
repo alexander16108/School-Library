@@ -10,12 +10,10 @@ class Rental
   attr_reader :book, :person
 
   def book=(book)
-    @book = book
-    book.rental.push(self) unless book.rental.include?(self)
+    book.rental.push(self) unless book.add_rental.include?(self)
   end
 
   def person=(person)
-    @person = person
     person.rental.push(self) unless person.rental.include?(self)
   end
 end
