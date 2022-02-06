@@ -24,6 +24,12 @@
 - LinkedIn: [Ngu Kingsely](https://www.linkedin.com/in/ngu-kingsely-junior-cho-974b60136/)
 
 
+
+👤 **Alexander Odufuye**
+
+- GitHub: [@Alexander16108](https://github.com/alexander16108)
+- LinkedIn: [Ngu Kingsely](https://www.linkedin.com/in/codingrex/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
